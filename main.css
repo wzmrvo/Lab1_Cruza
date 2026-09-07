@@ -1,0 +1,240 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f6ff;
+    color: #222;
+    transition: 0.3s;
+}
+
+/* Header */
+header {
+    background: #3730a3;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+nav h1 {
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #a7f3d0;
+}
+
+/* Hero */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.hero h2 span {
+    color: #3730a3;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+.welcome {
+    color: #047857;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Buttons */
+.button,
+form button,
+#themeButton {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button {
+    display: inline-block;
+    background: #047857;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.button:hover,
+form button:hover {
+    background: #065f46;
+}
+
+#themeButton {
+    background: white;
+    color: #3730a3;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+/* Sections */
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 25px;
+    text-align: center;
+}
+
+.section h2 {
+    color: #3730a3;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #047857;
+    margin-bottom: 10px;
+}
+
+/* Form */
+form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-family: inherit;
+}
+
+form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+form button {
+    background: #047857;
+    color: white;
+    padding: 13px;
+    border-radius: 7px;
+}
+
+/* Footer */
+footer {
+    background: #3730a3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode .hero {
+    background: #1f2937;
+}
+
+body.dark-mode .hero h2 span,
+body.dark-mode .section h2 {
+    color: #a7f3d0;
+}
+
+body.dark-mode .card {
+    background: #374151;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background: #374151;
+    color: white;
+    border-color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
