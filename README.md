@@ -205,6 +205,7 @@ This is the original HTML-only version.
 * Git
 * GitHub
 * Visual Studio Code
+* ChatGPT
 
 # Conclusion
 
